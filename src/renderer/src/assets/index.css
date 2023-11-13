@@ -1,0 +1,117 @@
+@tailwind base;
+body {
+  @apply flex flex-col text-[#000000] bg-[#e5e6ee];
+  font-family:
+    Roboto,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Helvetica Neue',
+    'Segoe UI',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Open Sans',
+    sans-serif;
+}
+* {
+  @apply m-0 p-0;
+}
+
+@tailwind components;
+ul {
+  list-style: none;
+}
+code {
+  @apply font-semibold bg-[#26282e] text-[85%] px-[5px] py-[3px] rounded-[2px];
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
+}
+a {
+  @apply text-[#000000] font-semibold cursor-pointer no-underline hover:border-b hover:border-solid;
+  outline: none;
+}
+.container {
+  @apply flex-1 flex flex-col max-w-[840px] mx-auto my-0 pt-[15px] pb-0 px-[30px];
+}
+.versions {
+  @apply float-none clear-both overflow-hidden text-[#000000] leading-none transition-all duration-[0.3s] mx-auto my-0;
+  font-family: 'Menlo', 'Lucida Console', monospace;
+}
+.versions li {
+  @apply block float-left text-[13px] opacity-80 px-[20px] py-0 border-r-[rgba(194,245,255,0.4)] border-r border-solid last:border-[none];
+}
+.hero-logo {
+  @apply mt-[-0.4rem] transition-all duration-[0.3s];
+}
+@media (max-width: 840px) {
+  .versions {
+    @apply hidden;
+  }
+  .hero-logo {
+    @apply -mt-6;
+  }
+}
+.hero-text {
+  @apply font-normal text-[#000000] text-center -mt-2 mb-[10px];
+}
+@media (max-width: 660px) {
+  .hero-logo {
+    @apply hidden;
+  }
+  .hero-text {
+    @apply mt-[20px];
+  }
+}
+.hero-tagline {
+  @apply text-center mb-[14px];
+}
+.links {
+  @apply flex items-center justify-center text-[18px] font-medium mb-[24px];
+}
+.links a {
+  @apply font-medium;
+}
+.links .link-item {
+  @apply px-[4px] py-0;
+}
+.features {
+  @apply flex flex-wrap mt-[-6px] mr-[-6px] mb-[-6px] ml-[-6px];
+}
+.features .feature-item {
+  @apply w-[33.33%] box-border p-[6px];
+}
+.features article {
+  @apply bg-[rgba(194,245,255,0.1)] box-border h-full p-[12px] rounded-[8px];
+}
+.features span {
+  @apply text-[#000000] break-all;
+}
+.features .title {
+  @apply text-[17px] font-medium text-[#000000] leading-[22px] overflow-hidden text-ellipsis whitespace-nowrap;
+}
+.features .detail {
+  @apply text-[14px] font-medium leading-[22px] mt-[6px];
+}
+@media (max-width: 660px) {
+  .features .feature-item {
+    @apply w-6/12;
+  }
+}
+@media (max-width: 480px) {
+  .links {
+    @apply flex-col leading-[32px];
+  }
+  .links .link-dot {
+    @apply hidden;
+  }
+  .features .feature-item {
+    @apply w-full;
+  }
+}
+@tailwind utilities;
