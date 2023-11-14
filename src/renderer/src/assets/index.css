@@ -1,21 +1,19 @@
 @tailwind base;
-body {
-  @apply flex flex-col text-[#000000] bg-[#e5e6ee];
-  font-family:
-    Roboto,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Helvetica Neue',
-    'Segoe UI',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Open Sans',
-    sans-serif;
+@layer base {
+  html {
+    font-family: 'Noto KR';
+  }
+  body {
+    @apply bg-[#F2F2F2];
+  }
 }
+
 * {
   @apply m-0 p-0;
 }
 
 @tailwind components;
+.main-container {
+  @apply flex flex-col w-screen h-screen;
+}
 @tailwind utilities;
