@@ -1,7 +1,8 @@
 @tailwind base;
 @layer base {
   html {
-    font-family: 'Noto KR';
+    @apply not-italic leading-[normal];
+    font-family: Noto Sans KR;
   }
   body {
     @apply bg-[#F2F2F2];
@@ -14,6 +15,25 @@
 
 @tailwind components;
 .main-container {
-  @apply flex flex-col w-screen h-screen;
+  @apply flex w-full h-screen;
 }
 @tailwind utilities;
+
+.font-plain {
+  @apply not-italic leading-[normal];
+  font-family: Noto Sans KR;
+}
+
+.nav-text {
+  @apply text-[color:var(--Point,#4582E9)] text-[56px] not-italic font-medium leading-[70px] tracking-[-2.8px];
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Noto Sans KR;
+  /* 125% */
+}
+.mesure-result-text {
+  @apply text-[color:var(--black,#1A191D)] text-[56px] not-italic font-medium leading-[75px] tracking-[-2.8px];
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Noto Sans KR;
+}

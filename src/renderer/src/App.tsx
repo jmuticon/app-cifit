@@ -1,11 +1,11 @@
-import LoginNav from './components/LoginNav'
-import LoginForm from './components/LoginForm'
+// import LoginSignup from './pages/LoginSignup'
+import MeasureResult from './pages/MeasureResult'
 
 function App(): JSX.Element {
   return (
     <div className="main-container">
-      <LoginNav />
-      <LoginForm />
+      {/* <LoginSignup /> */}
+      <MeasureResult />
     </div>
   )
 }

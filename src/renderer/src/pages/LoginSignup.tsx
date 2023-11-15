@@ -1,23 +1,16 @@
-import logo from './logo.svg'
-import './App.css'
-
+import LoginNav from '@renderer/components/LoginNav'
+import LoginForm from '@renderer/components/LoginForm'
+import LogoNav from '@renderer/components/LogoNav'
 function LoginSignup(): JSX.Element {
   return (
-    <div className="ml-8">
-      <header>
-        <img src={logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload. Amitav
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col w-screen p-0 m-0">
+      <LogoNav />
+      <div className="flex justify-center w-full">
+        <div className="w-[calc(100vw-351px)]">
+          <LoginNav />
+          <LoginForm />
+        </div>
+      </div>
     </div>
   )
 }
