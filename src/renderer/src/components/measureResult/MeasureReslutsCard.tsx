@@ -1,3 +1,20 @@
+// const { ipcRenderer } = require('electron')
+// const { exec } = require('child_process')
+
+// ipcRenderer.on('open-keyboard', () => {
+//   // Open the system keyboard using a system command
+//   if (process.platform === 'win32') {
+//     // For Windows
+//     exec('osk')
+//   } else if (process.platform === 'darwin') {
+//     // For macOS
+//     exec('open -a "KeyboardViewer"')
+//   } else {
+//     // For Linux (GNOME)
+//     exec('gnome-screen-keyboard')
+//     // You may need to adjust the command based on the desktop environment used on Linux
+//   }
+// })
 import MRImage from '../../assets/MRImage.svg'
 function MeasureResultCard(): JSX.Element {
   return (

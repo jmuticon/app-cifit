@@ -1,10 +1,11 @@
 // import LoginSignup from './pages/LoginSignup'
+import LoginSignup from './pages/LoginSignup'
 import MeasureResult from './pages/MeasureResult'
 
 function App(): JSX.Element {
   return (
     <div className="main-container">
-      {/* <LoginSignup /> */}
+      <LoginSignup />
       <MeasureResult />
     </div>
   )

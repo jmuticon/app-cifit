@@ -22,6 +22,7 @@
 .font-plain {
   @apply not-italic leading-[normal];
   font-family: Noto Sans KR;
+  leading-trim: both;
 }
 
 .nav-text {
@@ -33,6 +34,12 @@
 }
 .mesure-result-text {
   @apply text-[color:var(--black,#1A191D)] text-[56px] not-italic font-medium leading-[75px] tracking-[-2.8px];
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Noto Sans KR;
+}
+.nav-right-text {
+  @apply text-[32px] not-italic font-normal leading-[normal] tracking-[-1.6px];
   leading-trim: both;
   text-edge: cap;
   font-family: Noto Sans KR;

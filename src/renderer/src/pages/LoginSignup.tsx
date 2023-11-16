@@ -1,6 +1,6 @@
-import LoginNav from '@renderer/components/LoginNav'
+import LoginNav from '@renderer/components/navs/LoginNav'
 import LoginForm from '@renderer/components/LoginForm'
-import LogoNav from '@renderer/components/LogoNav'
+import LogoNav from '@renderer/components/navs/LogoNav'
 function LoginSignup(): JSX.Element {
   return (
     <div className="flex flex-col w-screen p-0 m-0">

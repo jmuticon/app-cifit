@@ -1,4 +1,4 @@
-import TextNav from '@renderer/components/TextNav'
+import TextNav from '@renderer/components/navs/TextNav'
 import MeasureResultCard from '@renderer/components/measureResult/MeasureReslutsCard'
 import MeasureResultText from '@renderer/components/measureResult/MeasureResultText'
 function MeasureResult(): JSX.Element {
