@@ -1,4 +1,4 @@
-import logo from '../../assets/Logo.svg'
+import logo from '../../assets/img/Logo.svg'
 type LogoNavProps = {
   rightIcon1?: string
   rightText1?: string

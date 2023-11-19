@@ -15,7 +15,7 @@
 //     // You may need to adjust the command based on the desktop environment used on Linux
 //   }
 // })
-import MRImage from '../../assets/MRImage.svg'
+import MRImage from '../../assets/img/MRImage.svg'
 function MeasureResultCard(): JSX.Element {
   return (
     <div className="mt-[53px]">

@@ -3,7 +3,8 @@ import MeasureResultCard from '@renderer/components/measureResult/MeasureResluts
 import MeasureResultText from '@renderer/components/measureResult/MeasureResultText'
 function MeasureResult(): JSX.Element {
   const navProperties = {
-    text: '측정 결과'
+    text: '측정 결과',
+    textDecor: 'text-[#4582E9]'
   }
   return (
     <div className="flex flex-col w-screen">

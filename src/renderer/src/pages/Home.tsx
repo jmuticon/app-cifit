@@ -1,12 +1,13 @@
 import HomeNav from '@renderer/components/navs/HomeNav'
-import loclalIcon from '../assets/localaization.svg'
-import logoutIcon from '../assets/logout.svg'
-import eagleImage from '../assets/Eagle.svg'
-import setingIcon from '../assets/settingIcon.svg'
-import qrcode from '../assets/qrcode.svg'
+import loclalIcon from '../assets/img/localaization.svg'
+import logoutIcon from '../assets/img/logout.svg'
+import eagleImage from '../assets/img/Eagle.svg'
+import setingIcon from '../assets/img/settingIcon.svg'
+import qrcode from '../assets/img/qrcode.svg'
 import ImgOverlay from '@renderer/components/cards/ImgOverlay'
 import { cardProps } from '@renderer/types/proptypes'
-import cardImage from '../assets/cardImg.svg'
+import cardImage from '../assets/img/cardImg.svg'
+import cardImgGirl from '../assets/img/cardbggirl.svg'
 function Home(): JSX.Element {
   const navProperties = {
     rightText1: '측정 결과',
@@ -20,9 +21,52 @@ function Home(): JSX.Element {
     cards: [
       {
         id: 1,
+        cardTitle: 'Home',
+        cardImage: cardImage,
+        cardLink: '/home',
+        cardText: '체형, 근력, 심폐지구력 등'
+      },
+      {
+        id: 2,
+        cardTitle: 'Login',
+        cardImage: cardImgGirl,
+        cardLink: '/login',
+        cardText: '체형, 근력, 심폐지구력 등'
+      },
+      {
+        id: 3,
+        cardTitle: 'Measure',
         cardImage: cardImage,
         cardLink: '/measure',
-        cardText: '측정 결과'
+        cardText: '체형, 근력, 심폐지구력 등'
+      },
+      {
+        id: 4,
+        cardTitle: 'Body Shape',
+        cardImage: cardImgGirl,
+        cardLink: '/bodyShape',
+        cardText: '체형, 근력, 심폐지구력 등'
+      },
+      {
+        id: 5,
+        cardTitle: '측정 결과',
+        cardImage: cardImage,
+        cardLink: '/home',
+        cardText: '체형, 근력, 심폐지구력 등'
+      },
+      {
+        id: 6,
+        cardTitle: '측정 결과',
+        cardImage: cardImgGirl,
+        cardLink: '/home',
+        cardText: '체형, 근력, 심폐지구력 등'
+      },
+      {
+        id: 7,
+        cardTitle: '측정 결과',
+        cardImage: cardImage,
+        cardLink: '/home',
+        cardText: '체형, 근력, 심폐지구력 등'
       }
     ]
   }

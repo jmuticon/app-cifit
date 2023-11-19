@@ -23,10 +23,11 @@
   @apply not-italic leading-[normal];
   font-family: Noto Sans KR;
   leading-trim: both;
+  text-edge: cap;
 }
 
 .nav-text {
-  @apply text-[color:var(--Point,#4582E9)] text-[56px] not-italic font-medium leading-[70px] tracking-[-2.8px];
+  @apply text-[56px] not-italic font-medium leading-[70px] tracking-[-2.8px];
   leading-trim: both;
   text-edge: cap;
   font-family: Noto Sans KR;

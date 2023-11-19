@@ -1,4 +1,4 @@
-import qrCode from '../../assets/qrcode.svg'
+import qrCode from '../../assets/img/qrcode.svg'
 function LoginNav(): JSX.Element {
   //   const [versions] = useState(window.electron.process.versions)
 

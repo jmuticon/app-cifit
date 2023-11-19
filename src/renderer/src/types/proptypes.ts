@@ -1,7 +1,8 @@
 export type cardProp = {
-    id: number
-    cardLink: string
-    cardText: string
-    cardImage: string
+  id: number
+  cardTitle: string
+  cardLink: string
+  cardText: string
+  cardImage: string
 }
 export type cardProps = { cards: cardProp[] }
