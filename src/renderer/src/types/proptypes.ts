@@ -6,3 +6,9 @@ export type cardProp = {
   cardImage: string
 }
 export type cardProps = { cards: cardProp[] }
+
+export type BodyShapeBarsProps = {
+  title: string
+  leftWidth: number
+  rightWidth: number
+}

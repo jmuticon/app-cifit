@@ -6,13 +6,31 @@ import fatfemail from '../assets/img/fatwomenImg.svg'
 import skeleteton from '../assets/img/skeletonImg.svg'
 import activeleftarrow from '../assets/img/activeleftarrow.svg'
 import activerightarrow from '../assets/img/activeRightarraow.svg'
-import dottedline from '../assets/img/dottedline.svg'
+import BodyShapeBars from '@renderer/components/BodyShapeBars'
+import { BodyShapeBarsProps } from '@renderer/types/proptypes'
 function BodyShapeMeasurement(): JSX.Element {
   const tabsRef = useRef<TabsRef>(null)
   const [activeTab, setActiveTab] = useState(0)
   const navProperties = {
     text: '체형 측정 결과'
   }
+  const bodyShapeBarsProps: BodyShapeBarsProps[] = [
+    {
+      title: '측면',
+      leftWidth: 70,
+      rightWidth: 30
+    },
+    {
+      title: '목회전',
+      leftWidth: 70,
+      rightWidth: 30
+    },
+    {
+      title: '후면',
+      leftWidth: 20,
+      rightWidth: 50
+    }
+  ]
   const customTheme: CustomFlowbiteTheme['tab'] = {
     base: 'flex flex-col gap-2',
     tablist: {
@@ -77,21 +95,9 @@ function BodyShapeMeasurement(): JSX.Element {
         <img src={activerightarrow} alt="" />
       </div>
       <div className="flex flex-row justify-center w-full">
-        <div className="flex flex-row justify-between w-[calc(50%-2px)]">
-          <p className="font-plain">측굴</p>
-          <div className="flex flex-row justify-center w-3/4 bg-[#D0DEF0] rounded-full h-[46px]">
-            <div className="bg-[#F5432B] h-[46px] rounded-full w-[30%]"></div>
-            <div className="bg-[#4582E9] h-[46px] rounded-full w-[20%]"></div>
-          </div>
-        </div>
-        <img src={dottedline} alt="" />
-        <div className="flex flex-row justify-between w-[calc(50%-2px)]">
-          <p className="text-left">측굴</p>
-          <div className="flex flex-row justify-center w-3/4 bg-[#D0DEF0] rounded-full h-[46px] ">
-            <div className="bg-[#F5432B] h-[46px] rounded-full w-[30%]"></div>
-            <div className="bg-[#4582E9] h-[46px] rounded-full w-[20%]"></div>
-          </div>
-        </div>
+        {bodyShapeBarsProps.map((props, index) => (
+          <BodyShapeBars key={index} {...props} />
+        ))}
       </div>
     </div>
   )
