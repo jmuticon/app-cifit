@@ -11,7 +11,7 @@ import cardImgGirl from '../assets/img/cardbggirl.svg'
 function Home(): JSX.Element {
   const navProperties = {
     rightText1: '측정 결과',
-    rightLink1: '/measure',
+    rightLink1: '/bodyShape',
     rightIcon1: loclalIcon,
     rightText2: '로그아웃',
     rightLink2: '/login',
@@ -49,9 +49,9 @@ function Home(): JSX.Element {
       },
       {
         id: 5,
-        cardTitle: '측정 결과',
+        cardTitle: 'PrepBody',
         cardImage: cardImage,
-        cardLink: '/home',
+        cardLink: '/prepbodymeasure',
         cardText: '체형, 근력, 심폐지구력 등'
       },
       {
