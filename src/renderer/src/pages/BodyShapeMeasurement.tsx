@@ -4,10 +4,8 @@ import { CustomFlowbiteTheme, Tabs, TabsRef } from 'flowbite-react'
 import { SetStateAction, useRef, useState } from 'react'
 import fatfemail from '../assets/img/fatwomenImg.svg'
 import skeleteton from '../assets/img/skeletonImg.svg'
-import activeleftarrow from '../assets/img/activeleftarrow.svg'
-import activerightarrow from '../assets/img/activeRightarraow.svg'
-import BodyShapeBars from '@renderer/components/BodyShapeBars'
-import { BodyShapeBarsProps } from '@renderer/types/proptypes'
+import { BodyShapeBarsProps, ItemProps } from '@renderer/types/proptypes'
+import BodyShapeTabs from '@renderer/components/bodyShape/BodyshapeTabs'
 function BodyShapeMeasurement(): JSX.Element {
   const tabsRef = useRef<TabsRef>(null)
   const [activeTab, setActiveTab] = useState(0)
@@ -18,19 +16,104 @@ function BodyShapeMeasurement(): JSX.Element {
     {
       title: '측면',
       leftWidth: 70,
-      rightWidth: 30
+      rightWidth: 30,
+      leftText: '좌측',
+      rightText: '우측'
     },
     {
       title: '목회전',
       leftWidth: 70,
-      rightWidth: 30
+      rightWidth: 30,
+      leftText: 'X다리',
+      rightText: '오다리'
     },
     {
       title: '후면',
       leftWidth: 20,
-      rightWidth: 50
+      rightWidth: 50,
+      leftText: 'X다리',
+      rightText: '오다리'
+    },
+    {
+      title: '측면',
+      leftWidth: 70,
+      rightWidth: 30,
+      leftText: 'X다리',
+      rightText: '오다리'
+    },
+    {
+      title: '측면',
+      leftWidth: 70,
+      rightWidth: 30,
+      leftText: 'X다리',
+      rightText: '오다리'
     }
   ]
+  const tabItemProps: ItemProps = {
+    barprops: bodyShapeBarsProps,
+    img1: fatfemail,
+    img2: skeleteton,
+    pageInnerContent2: [
+      {
+        title: '왼쪽',
+        buttons: [
+          {
+            text: '위등세모근',
+            onClick: (): void => {}
+          },
+          {
+            text: '뒤통수 밑근',
+            onClick: (): void => {}
+          },
+          {
+            text: '목갈비근',
+            onClick: (): void => {}
+          },
+          {
+            text: '목빗근',
+            onClick: (): void => {}
+          },
+          {
+            text: '어깨올림근',
+            onClick: (): void => {}
+          },
+          {
+            text: '작은가슴근',
+            onClick: (): void => {}
+          }
+        ]
+      },
+      {
+        title: '오른쪽',
+        buttons: [
+          {
+            text: '위등세모근',
+            onClick: (): void => {}
+          },
+          {
+            text: '뒤통수 밑근',
+            onClick: (): void => {}
+          },
+          {
+            text: '목갈비근',
+            onClick: (): void => {}
+          },
+          {
+            text: '목빗근',
+            onClick: (): void => {}
+          },
+          {
+            text: '어깨올림근',
+            onClick: (): void => {}
+          },
+          {
+            text: '작은가슴근',
+            onClick: (): void => {}
+          }
+        ]
+      }
+    ]
+  }
   const customTheme: CustomFlowbiteTheme['tab'] = {
     base: 'flex flex-col gap-2',
     tablist: {
@@ -52,12 +135,13 @@ function BodyShapeMeasurement(): JSX.Element {
       }
     },
     tabitemcontainer: {
-      base: 'ml-[72px] w-[calc(100vw-144px)]'
+      base: 'm-auto w-[calc(100vw-144px)]'
     }
   }
   return (
     <div className="flex flex-col w-screen">
       <TextNav {...navProperties} />
+
       <Tabs.Group
         aria-label="Default tabs"
         theme={customTheme}
@@ -66,21 +150,13 @@ function BodyShapeMeasurement(): JSX.Element {
         onActiveTabChange={(tab: SetStateAction<number>): void => setActiveTab(tab)}
       >
         <Tabs.Item active title="정면">
-          <div className="flex flex-row justify-between">
-            <img src={fatfemail} alt="" />
-            <img src={skeleteton} alt="" />
-          </div>
+          <BodyShapeTabs {...tabItemProps} />
         </Tabs.Item>
         <Tabs.Item title="측면">
-          This is{' '}
-          <span className="font-medium text-gray-800 dark:text-white">
-            Dashboard tab's associated content
-          </span>
-          . Clicking another tab will toggle the visibility of this one for the next. The tab
-          JavaScript swaps classes to control the content visibility and styling.
+          <BodyShapeTabs {...tabItemProps} />
         </Tabs.Item>
         <Tabs.Item title="후면">
-          This is{' '}
+          This is
           <span className="font-medium text-gray-800 dark:text-white">
             Settings tab's associated content
           </span>
@@ -88,17 +164,8 @@ function BodyShapeMeasurement(): JSX.Element {
           JavaScript swaps classes to control the content visibility and styling.
         </Tabs.Item>
       </Tabs.Group>
+
       <div className="text-sm text-gray-500 dark:text-gray-400">Active tab: {activeTab}</div>
-      <div className="flex flex-row justify-center">
-        <img src={activeleftarrow} alt="" />
-        <p className="px-[59px] font-plain font-medium text-[40px]">자세 측정 결과</p>
-        <img src={activerightarrow} alt="" />
-      </div>
-      <div className="flex flex-row justify-center w-full">
-        {bodyShapeBarsProps.map((props, index) => (
-          <BodyShapeBars key={index} {...props} />
-        ))}
-      </div>
     </div>
   )
 }

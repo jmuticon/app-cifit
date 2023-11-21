@@ -10,7 +10,7 @@ function TextNav(_props: TextNavProps): JSX.Element {
     textDecor = textDecor + ' ' + _props.textDecor
   }
   return (
-    <nav className="w-full bg-transparent pl-[71px] pr-[72px] mt-[57px] mb-[40px]">
+    <nav className="w-full bg-transparent px-[72px] mt-[57px] mb-[40px]">
       <div className="mx-auto flex flex-wrap items-center justify-between container">
         <a className={textDecor} href="/login">
           {_props.text}

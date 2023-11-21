@@ -1,5 +1,5 @@
 import { BodyShapeBarsProps } from '@renderer/types/proptypes'
-import dottedline from '../assets/img/dottedline.svg'
+import dottedline from '../../assets/img/dottedline.svg'
 import { useLayoutEffect, useRef } from 'react'
 
 function BodyShapeBars(_props: BodyShapeBarsProps): JSX.Element {
@@ -15,8 +15,10 @@ function BodyShapeBars(_props: BodyShapeBarsProps): JSX.Element {
     }
   }, [])
   return (
-    <div className="flex flex-row justify-between w-1/2 pt-[1%]">
-      <p className="font-plain ">{_props.title}</p>
+    <div className="flex justify-between pt-[1%]">
+      <p className="w-1/4 font-plain text-[24px] not-italic font-medium leading-[normal] tracking-[-0.72px]">
+        {_props.title}
+      </p>
       <div className="w-3/4 ">
         <div className="flex flex-row w-full justify-center bg-[#D0DEF0] rounded-2xl">
           <div className="w-[calc(50%-2px)] flex flex-row justify-end">
@@ -38,8 +40,12 @@ function BodyShapeBars(_props: BodyShapeBarsProps): JSX.Element {
           </div>
         </div>
         <div className="flex flex-row justify-between items-end w-full">
-          <p>X다리</p>
-          <p>오다리</p>
+          <p className="text-[#4582E9] text-[16px] not-italic font-medium leading-[normal] tracking-[-0.48px]">
+            {_props.leftText}
+          </p>
+          <p className="text-[#4582E9] text-[16px] not-italic font-medium leading-[normal] tracking-[-0.48px]">
+            {_props.rightText}
+          </p>
         </div>
       </div>
     </div>
