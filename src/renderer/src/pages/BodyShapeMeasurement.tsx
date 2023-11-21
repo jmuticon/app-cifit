@@ -114,6 +114,71 @@ function BodyShapeMeasurement(): JSX.Element {
       }
     ]
   }
+  const tabItemProps2: ItemProps = {
+    barprops: bodyShapeBarsProps,
+    img1: skeleteton,
+    img2: fatfemail,
+    pageInnerContent2: [
+      {
+        title: '왼쪽',
+        buttons: [
+          {
+            text: '위등세모근',
+            onClick: (): void => {}
+          },
+          {
+            text: '뒤통수 밑근',
+            onClick: (): void => {}
+          },
+          {
+            text: '목갈비근',
+            onClick: (): void => {}
+          },
+          {
+            text: '목빗근',
+            onClick: (): void => {}
+          },
+          {
+            text: '어깨올림근',
+            onClick: (): void => {}
+          },
+          {
+            text: '작은가슴근',
+            onClick: (): void => {}
+          }
+        ]
+      },
+      {
+        title: '오른쪽',
+        buttons: [
+          {
+            text: '위등세모근',
+            onClick: (): void => {}
+          },
+          {
+            text: '뒤통수 밑근',
+            onClick: (): void => {}
+          },
+          {
+            text: '목갈비근',
+            onClick: (): void => {}
+          },
+          {
+            text: '목빗근',
+            onClick: (): void => {}
+          },
+          {
+            text: '어깨올림근',
+            onClick: (): void => {}
+          },
+          {
+            text: '작은가슴근',
+            onClick: (): void => {}
+          }
+        ]
+      }
+    ]
+  }
   const customTheme: CustomFlowbiteTheme['tab'] = {
     base: 'flex flex-col gap-2',
     tablist: {
@@ -153,7 +218,7 @@ function BodyShapeMeasurement(): JSX.Element {
           <BodyShapeTabs {...tabItemProps} />
         </Tabs.Item>
         <Tabs.Item title="측면">
-          <BodyShapeTabs {...tabItemProps} />
+          <BodyShapeTabs {...tabItemProps2} />
         </Tabs.Item>
         <Tabs.Item title="후면">
           This is
