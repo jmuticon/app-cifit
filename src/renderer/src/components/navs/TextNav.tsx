@@ -1,9 +1,7 @@
 // import { Navbar } from 'flowbite-react'
+import { TextNavProps } from '@renderer/types/proptypes'
 import home from '../../assets/img/home.svg'
-type TextNavProps = {
-  text: string
-  textDecor?: string
-}
+
 function TextNav(_props: TextNavProps): JSX.Element {
   let textDecor = 'flex items-center nav-text nav-text'
   if (_props.textDecor) {

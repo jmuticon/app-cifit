@@ -27,3 +27,18 @@ export type ItemProps = {
   img2: string
   pageInnerContent2?: PageInnerContent2[]
 }
+export type TextNavProps = {
+  text: string
+  textDecor?: string
+}
+export type NumberedTextProps = {
+  title: string
+  bodyTexts: string[]
+}
+
+export type MeasureInstruction = {
+  img?: string
+  bodyTexts: string
+  titleText?: string
+}
+export type MeasureInstructionProps = { instructions: MeasureInstruction[] }
