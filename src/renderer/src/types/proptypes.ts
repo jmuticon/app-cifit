@@ -42,3 +42,13 @@ export type MeasureInstruction = {
   titleText?: string
 }
 export type MeasureInstructionProps = { instructions: MeasureInstruction[] }
+
+export type MesureItemsTextProps = {
+  title: string
+  bodyTexts: [
+    {
+      subHeader: string
+      text: string
+    }
+  ]
+}

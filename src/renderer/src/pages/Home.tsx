@@ -56,9 +56,9 @@ function Home(): JSX.Element {
       },
       {
         id: 6,
-        cardTitle: '측정 결과',
+        cardTitle: 'BodyMeasure',
         cardImage: cardImgGirl,
-        cardLink: '/home',
+        cardLink: '/bodymeasure',
         cardText: '체형, 근력, 심폐지구력 등'
       },
       {

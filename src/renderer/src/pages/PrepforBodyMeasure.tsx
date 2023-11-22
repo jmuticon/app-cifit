@@ -5,6 +5,7 @@ import exlamatory from '../assets/img/exlamatory.svg'
 import crossblue from '../assets/img/crossblue.svg'
 import MeasureInstructions from '@renderer/components/measureResult/MeasureInstructions'
 import FooterButtons from '@renderer/components/common/FooterButtons'
+import BodymeasureInputText from '@renderer/components/measureResult/BodymeasureInputText'
 
 function PrepforBodyMeasure(): JSX.Element {
   const navProperties = {
@@ -40,18 +41,7 @@ function PrepforBodyMeasure(): JSX.Element {
         <MeasureInstructions {...measureInstructionProps} />
       </div>
       <div className="flex flex-col justify-center items-center px-[72px] pt-10">
-        <div className="flex flex-row justify-start items-center w-full gap-4">
-          <p className="text-[#4D5055] text-[48px] not-italic font-medium leading-[100%] tracking-[-2.4px]">
-            측정 준비
-          </p>
-          <input
-            type="text"
-            className=" w-64 h-[100px] bg-[#fafafa] border-transparent rounded-[20px]"
-          />
-          <p className="text-[#4D5055] text-[48px] not-italic font-medium leading-[100%] tracking-[-2.4px]">
-            cm 이며,
-          </p>
-        </div>
+        <BodymeasureInputText />
       </div>
       <FooterButtons {...{ grayText: '측정 다시하기', blueText: '저장하기' }} />
     </div>

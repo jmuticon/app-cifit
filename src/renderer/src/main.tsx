@@ -8,6 +8,7 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import BodyShapeMeasurement from './pages/BodyShapeMeasurement'
 import PrepforBodyMeasure from './pages/PrepforBodyMeasure'
+import BodyMeasure from './pages/BodyMeasure'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -20,6 +21,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           <Route path="/measure" element={<MeasureResult />} />
           <Route path="/bodyShape" element={<BodyShapeMeasurement />} />
           <Route path="/prepbodymeasure" element={<PrepforBodyMeasure />} />
+          <Route path="/bodymeasure" element={<BodyMeasure />} />
+          {/* MeasuringItemsText */}
         </Route>
       </Routes>
     </BrowserRouter>
